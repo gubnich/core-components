@@ -97,7 +97,7 @@ describe(
                 .then(() => page.mouse.down().then(() => page.waitForTimeout(500)));
         },
         matchImageSnapshotOptions: {
-            customSnapshotIdentifier: (...args) => `hover-${customSnapshotIdentifier(...args)}`,
+            customSnapshotIdentifier: (...args) => `pressed-${customSnapshotIdentifier(...args)}`,
         },
     }),
 );

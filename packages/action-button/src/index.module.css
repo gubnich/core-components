@@ -23,25 +23,21 @@
     appearance: none;
     -webkit-tap-highlight-color: transparent;
 
-    &:hover,
-    &:active {
-        opacity: 0.8;
-    }
-
-    &.disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-    }
-
-    &.loading {
-        cursor: auto;
-        pointer-events: none;
-    }
-
     &.s {
         @mixin action_primary_small;
     }
 }
+
+.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+ }
+
+.loading {
+    cursor: auto;
+    pointer-events: none;
+ }
 
 .iconWrapper {
     display: flex;
@@ -49,13 +45,16 @@
     justify-content: center;
     flex-shrink: 0;
     margin-bottom: var(--gap-s);
-    border-radius: var(--border-radius-circle);
     transition: background-color 0.2s ease;
     line-height: 0;
 
     &.s {
         width: 48px;
         height: 48px;
+    }
+
+    & > * {
+        color: inherit;
     }
 }
 

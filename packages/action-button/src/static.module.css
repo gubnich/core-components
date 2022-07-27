@@ -19,7 +19,7 @@
         color: var(--action-button-static-primary-base-icon-color);
     }
 
-    & .iconWrapper [role=figure] path {
+    & .iconWrapper [role='figure'] path {
         fill: var(--action-button-static-primary-base-bg-color);
     }
 }
@@ -31,7 +31,7 @@
         color: var(--action-button-static-secondary-base-icon-color);
     }
 
-    & .iconWrapper [role=figure] path {
+    & .iconWrapper [role='figure'] path {
         fill: var(--action-button-static-secondary-base-bg-color);
     }
 }

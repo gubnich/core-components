@@ -32,12 +32,12 @@
     opacity: 0.3;
     cursor: not-allowed;
     pointer-events: none;
- }
+}
 
 .loading {
     cursor: auto;
     pointer-events: none;
- }
+}
 
 .iconWrapper {
     display: flex;

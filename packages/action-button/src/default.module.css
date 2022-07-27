@@ -23,15 +23,15 @@
         color: var(--action-button-primary-base-icon-color);
     }
 
-    & .iconWrapper [role=figure] path {
+    & .iconWrapper [role='figure'] path {
         fill: var(--action-button-primary-base-bg-color);
     }
 
-    &:hover .iconWrapper [role=figure] path {
+    &:hover .iconWrapper [role='figure'] path {
         fill: var(--action-button-primary-hover-color);
     }
 
-    &:active .iconWrapper [role=figure] path {
+    &:active .iconWrapper [role='figure'] path {
         fill: var(--action-button-primary-active-color);
     }
 }
@@ -43,17 +43,15 @@
         color: var(--action-button-secondary-base-icon-color);
     }
 
-    & .iconWrapper [role=figure] path {
+    & .iconWrapper [role='figure'] path {
         fill: var(--action-button-secondary-base-bg-color);
     }
 
-    &:hover .iconWrapper [role=figure] path {
+    &:hover .iconWrapper [role='figure'] path {
         fill: var(--action-button-secondary-hover-color);
     }
 
-    &:active .iconWrapper [role=figure] path {
+    &:active .iconWrapper [role='figure'] path {
         fill: var(--action-button-secondary-active-color);
     }
 }
-
-

@@ -83,7 +83,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
             children,
             colors = 'default',
             href,
-            Component = 'a',
+            Component = pseudo ? 'button' : 'a',
             ...restProps
         },
         ref,
@@ -93,8 +93,6 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         const [focused] = useFocus(linkRef, 'keyboard');
 
         const viewClassName = view === 'default' ? 'defaultView' : view;
-
-        const LinkComponent = pseudo ? 'button' : Component;
 
         const componentProps = {
             className: cn(
@@ -110,11 +108,11 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
             'data-test-id': dataTestId,
             rel: restProps.target === '_blank' ? 'noreferrer noopener' : undefined,
             // Для совместимости с react-router-dom, меняем href на to
-            [typeof LinkComponent === 'string' ? 'href' : 'to']: href,
+            [typeof Component === 'string' ? 'href' : 'to']: href,
         };
 
         return (
-            <LinkComponent {...componentProps} {...restProps} ref={mergeRefs([linkRef, ref])}>
+            <Component {...componentProps} {...restProps} ref={mergeRefs([linkRef, ref])}>
                 {leftAddons || rightAddons ? (
                     <React.Fragment>
                         {leftAddons && <span className={styles.addons}>{leftAddons}</span>}
@@ -128,7 +126,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
                 ) : (
                     <span className={styles.text}>{children}</span>
                 )}
-            </LinkComponent>
+            </Component>
         );
     },
 );
